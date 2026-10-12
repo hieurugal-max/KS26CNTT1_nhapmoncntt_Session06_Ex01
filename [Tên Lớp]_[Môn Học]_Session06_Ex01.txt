@@ -1,0 +1,11 @@
+Bài 1 : Kiểm tra File Log Máy chủ Dung Lượng Lớn 
+
+Phần 1 : 
+-Lệnh của Nam bị lỗi vì sai hoàn toàn , lệnh bị quá nhiều dữ liệu không đưa đến mục đích chính , không nên mở file 500MB vì sẽ bị lag 
+-Lệnh đúng :  Get-Content file -Tail 10 -Wait
+Phần 2 : 
+-Lệnh xem file theo từng trang : 
+Get-Content server_log_500MB.log | more
+-Lệnh xem 10 dòng cuối : 
+Get-Content server_log_500MB.log -Tail 10
+
